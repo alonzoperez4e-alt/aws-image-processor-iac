@@ -1,14 +1,13 @@
-# --- Empaquetado de Código (Archive File) ---
 data "archive_file" "upload_zip" {
   type        = "zip"
-  source_dir  = "${path.root}/lambda/upload"
-  output_path = "${path.root}/lambda/upload_payload.zip"
+  source_dir  = "${path.module}/../../lambda/upload"
+  output_path = "${path.module}/../../lambda/upload_payload.zip"
 }
 
 data "archive_file" "crop_zip" {
   type        = "zip"
-  source_dir  = "${path.root}/lambda/crop"
-  output_path = "${path.root}/lambda/crop_payload.zip"
+  source_dir  = "${path.module}/../../lambda/crop"
+  output_path = "${path.module}/../../lambda/crop_payload.zip"
 }
 
 # --- Roles de IAM ---
