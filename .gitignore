@@ -1,0 +1,18 @@
+cat <<EOT >> .gitignore
+# Local .terraform directories
+**/.terraform/*
+
+# .tfstate files
+*.tfstate
+*.tfstate.*
+
+# Crash log files
+crash.log
+crash.*.log
+
+# Exclude all .tfvars files, which are likely to contain sensitive data
+# *.tfvars # (Nota: En este proyecto SI subiremos los tfvars por ser de entorno, así que lo omitimos)
+
+# Node.js
+node_modules/
+EOT
