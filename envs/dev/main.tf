@@ -8,7 +8,7 @@ terraform {
   }
 }
 
-provider "aws" {      # Configuración del proveedor de AWS
+provider "aws" { # Configuración del proveedor de AWS
   region = var.region
 }
 
@@ -25,7 +25,7 @@ module "networking" {
 module "messaging" {
   source      = "../../modules/messaging"
   environment = var.environment
-  bucket_arn  = module.storage.bucket_arn 
+  bucket_arn  = module.storage.bucket_arn
 }
 
 module "storage" {
@@ -33,7 +33,7 @@ module "storage" {
   environment   = var.environment
   sqs_queue_arn = module.messaging.main_queue_arn
 }
-      
+
 module "observability" {
   source             = "../../modules/observability"
   environment        = var.environment
