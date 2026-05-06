@@ -9,6 +9,7 @@ terraform {
   provider "aws" {      # Configuración del proveedor de AWS
   region = var.region
 }
+}
 
 module "networking" {
   source            = "../../modules/networking"
@@ -62,5 +63,4 @@ module "apigw" {
 
 output "api_url" {
   value = module.apigw.api_endpoint
-}
 }

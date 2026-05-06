@@ -6,7 +6,8 @@ terraform {
     dynamodb_table = "tf-lock-image-processor"
     encrypt        = true
   }
-  provider "aws" {      # Configuración del proveedor de AWS
+}
+ provider "aws" {      # Configuración del proveedor de AWS
   region = var.region
 }
 
@@ -62,5 +63,4 @@ module "apigw" {
 
 output "api_url" {
   value = module.apigw.api_endpoint
-}
 }
