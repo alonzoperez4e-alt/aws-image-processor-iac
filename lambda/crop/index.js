@@ -1,0 +1,1 @@
+exports.handler = async (event) => { console.log("Crop triggered"); return { statusCode: 200, body: "OK" }; };
