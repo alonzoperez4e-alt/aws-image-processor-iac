@@ -1,0 +1,1 @@
+exports.handler = async (event) => { console.log("Upload triggered"); return { statusCode: 200, body: "OK" }; };
